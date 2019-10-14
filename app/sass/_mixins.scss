@@ -9,8 +9,14 @@
 }
 
 
-@mixin btn ($padding, $backgrnd-color, $backgrnd-active){
-    padding: $padding;
+
+@mixin btn ($padding-top, $padding-right, $padding-bottom, $padding-left, $backgrnd-color, $backgrnd-active){
+    
+    padding-top: $padding-top;
+    padding-right: $padding-right;
+    padding-bottom: $padding-bottom;
+    padding-left: $padding-left;
+    
     background-color: $backgrnd-color;
     
     &:hover, &:active, &:focus {
