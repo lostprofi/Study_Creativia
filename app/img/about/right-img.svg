@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="425" height="369" viewBox="0 0 425 369">
+ 
+<defs>
+    
+    <style>
+        .cls-1 {
+       
+        stroke: #fff;
+        stroke-linejoin: round;
+        stroke-width: 5px;
+        
+      }
+    </style>
+    
+    <pattern id = "image" height = "100%" width = "100%" viewBox="0 0 425 369" >
+		<image xlink:href = "right-img.png" x= "-6" y = "-73" height="100%" transform = "scale(1.8)"></image>
+        <!--<rect x="0" y="0" width="100%" height="100%" fill="skyblue" fill-opacity="0.5"/>-->
+	</pattern>
+  </defs>
+  
+	
+    
+  <path id="right_hex" data-name="right img" class="cls-1" fill = "url(#image)" d="M896.009,1346.01L792.015,1166,896.009,986H1103.99l103.99,180-103.99,180.01H896.009Z" transform="translate(-787.5 -981.5)"/>
+
+</svg>

@@ -1,0 +1,46 @@
+.card {
+    text-align: center;
+    
+    &__head{
+        
+        position: relative;
+        
+        
+    
+    }
+    
+    &__wrapper-svg {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left:0;
+        z-index: 1;
+        cursor: pointer;
+    }
+    
+    &__title {
+                
+        font-family: Raleway-Medium;
+        font-size: 20px;
+        color: rgb(0, 0, 0);
+        margin-top: 27px;
+    }
+    
+    &__toggle-content {
+        
+       font-family: Lato-Regular;
+        font-size: 16px;
+        line-height: 22px;
+        color: rgb(0, 0, 0);
+        height: 0;
+        overflow: hidden;
+        transition: 2s;
+        
+        &_style_about {
+            
+             margin-top: 14px;
+        }
+    }
+    
+}

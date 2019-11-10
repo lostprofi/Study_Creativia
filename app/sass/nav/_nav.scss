@@ -1,0 +1,37 @@
+.nav {
+    display: flex;
+    justify-content: flex-end;
+   
+    &__link {
+        
+        position: relative;
+        display: inline-block;
+        
+        background-clip: padding-box;
+        background-color: rgb(8, 8, 12);
+        
+        font-family: Raleway-Regular;
+        font-size: 18px;
+        padding: 22px 15px 21px 15px;
+        
+        &::before {
+        content: "";
+        position: absolute;
+        top: 0;  bottom: 0; left:0; right: 0;
+        background-color: rgb(255, 0, 54);
+        z-index: -1;
+        
+            
+    }
+        
+        &:hover::before{
+        margin-bottom: -2px;
+        margin-top: -3px;
+            
+          
+    }
+        
+        
+   
+    }
+}

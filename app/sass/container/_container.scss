@@ -1,0 +1,11 @@
+.container {
+    position: relative;
+    
+    &__header{
+        margin-bottom: 94px;
+    }
+    
+    &_style_about {
+        padding: 0;
+    }
+}

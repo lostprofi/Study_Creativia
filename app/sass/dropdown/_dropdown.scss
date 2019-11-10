@@ -1,0 +1,79 @@
+.dropdown {
+
+    &__btn {
+        
+        
+        text-align: start;
+        cursor: pointer;
+        
+        
+        background-color: rgb(247, 247, 247);
+        
+        color: rgb(0,0,0);
+        font-size: 20px;
+        
+        &:focus {
+            color: rgb(255, 0, 54);
+            outline: none;
+        }
+        
+        
+        &_style_about {
+            margin-top: 19px;
+            width: 100%;
+            border-top: 1px solid rgb(231, 231, 231);
+            border-bottom: 1px solid rgb(231, 231, 231);
+            border-left: none;
+            border-right: none;
+        }
+        
+        &_style_card-about{
+            text-align: center;
+        }
+    }
+    
+    
+    
+    &__toggle {
+        padding: 0 15px;
+        border-right: 1px solid rgb(231, 231, 231);
+        border-bottom: 1px solid rgb(231, 231, 231);
+        border-left: 1px solid rgb(231, 231, 231);
+        //display: none;
+        height: 0;
+        overflow: hidden;
+        transition: 2s;
+        
+        /*&_who-is-creativia {
+            height: 0;
+        }
+        
+        &_experiences {
+            height: 0;
+        }
+        
+        &_learn-more {
+            height: 0;
+        }*/
+        
+        &_style_card-about{
+            font-family: Lato-Regular;
+            font-size: 16px;
+            line-height: 22px;
+            color: rgb(0,0,0);
+            margin-top: 14px;
+            border-right: 0;
+            border-bottom: 0;
+            border-left: 0;
+           
+        }
+    }
+    
+    &_about {
+        text-align: center;
+        margin-left: -15px;
+    }
+    
+    
+
+}

@@ -1,0 +1,59 @@
+.text {
+    
+    &_color-light{
+        color: rgb(255, 255, 255);
+    }
+    
+    &_color-dark{
+        
+        
+      
+        color: rgb(0, 0, 0);
+    }
+    
+    &_style_heading-about {
+         font-family: Lato-Bold;
+        font-size: 16px;
+        font-weight: normal;
+        font-style: normal;
+        line-height: 22px;
+        letter-spacing: normal;
+        color: rgb(0, 0, 0);
+   
+   
+    }
+    
+    &_style_content-about {
+        font-family: Lato-Regular;
+        font-size: 16px;
+        font-weight: normal;
+        font-style: normal;
+        line-height: 22px;
+        letter-spacing: normal;
+        color: rgb(0, 0, 0);
+        text-align: justify;
+        margin-left: -15px;
+        margin-bottom: 21px;
+        
+   
+   
+    }
+    
+    &_style_toggle-about {
+        font-family: Lato-Regular;
+        font-size: 14px;
+        font-weight: normal;
+        font-style: normal;
+        line-height: 22px;
+        letter-spacing: normal;
+        color: rgb(0, 0, 0);
+        text-align: justify;
+    }
+    
+    
+    
+    &__span {
+        color: rgb(255, 0, 54);
+    }
+    
+}

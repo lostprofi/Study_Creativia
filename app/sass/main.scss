@@ -4,7 +4,8 @@
 
 @import "../../node_modules/bootstrap/scss/_functions.scss",
         "../../node_modules/bootstrap/scss/_mixins.scss",
-        "../../node_modules/bootstrap/scss/_variables.scss";
+        "../../node_modules/bootstrap/scss/_variables.scss",
+        "../../node_modules/bootstrap/scss/_utilities.scss";
 
 //optional bootstrap modules
 
@@ -13,7 +14,9 @@
 
 // my modules
 
-@import "_header.scss", "_aside.scss";
+@import "page/_page.scss", "header/_header.scss", "logo/_logo.scss", "link/_link.scss", "nav/nav.scss", "container/_container.scss",
+        "aside/_aside.scss", "carousel/_carousel.scss", "title/title.scss", "btn/_btn.scss", "section/_section.scss", "text/_text.scss", "dropdown/_dropdown.scss",
+        "hex-group/_hex-group.scss", "row/_row.scss", "card/_card.scss";
 
 //add fonts
 

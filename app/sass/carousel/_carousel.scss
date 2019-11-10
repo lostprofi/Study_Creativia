@@ -1,0 +1,91 @@
+.carousel {
+    
+    
+    &__items-wrapper {
+        width: 1030px;
+        z-index: 1;
+        margin-bottom: 36px;
+        
+    }
+    
+}
+
+
+
+.carousel-item {
+    
+    
+    &__text {
+        margin-top: 40px; 
+        margin-bottom: 43px;
+        color: rgb(255, 255, 255);
+        
+    }
+    
+    
+    &__btn {
+        padding: 14px 34px 15px 36px;
+        font-size: 20px;
+        font-weight: normal;
+        font-style: normal;
+        line-height: 20px;
+        letter-spacing: normal;
+        margin-top: 4px;
+        
+        
+    }
+    
+    
+    
+    &_align_center{
+        text-align: center;
+    }
+    
+   
+    
+    
+}
+
+
+//styling carousel arrows
+
+.war, .ral {
+    transform: rotateZ(180deg);
+}
+
+.ral, .rar {
+    display: none;
+}
+
+.wal, .ral {
+    left: 36px;
+    position: absolute;
+}
+
+.war, .rar {
+    right: 30px;
+    position: absolute;
+}
+
+.carousel-control-prev:active {
+    .wal {
+        display: none;
+    }
+    
+    .ral {
+        display: block;
+    }
+}
+
+.carousel-control-next:active {
+    .war {
+        display: none;
+    }
+    
+    .rar {
+        display: block;
+    }
+}
+
+//
+
