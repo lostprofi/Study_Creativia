@@ -4169,6 +4169,7 @@ a.text-dark:hover, a.text-dark:focus {
     margin-top: 94px; }
 
 .header {
+  padding: 95px 0 0 0;
   position: relative;
   text-align: center; }
   .header_bgnd_dark {
@@ -4334,6 +4335,8 @@ a.text-dark:hover, a.text-dark:focus {
     color: #ff0036; }
   .title_color_dark {
     color: black; }
+  .title_color_light {
+    color: white; }
 
 .btn {
   font-family: Raleway-Medium;
@@ -4519,7 +4522,8 @@ a.text-dark:hover, a.text-dark:focus {
     overflow: hidden;
     -webkit-transition: 2s;
     -o-transition: 2s;
-    transition: 2s; }
+    transition: 2s;
+    text-align: justify; }
     .card__toggle-content_style_about {
       margin-top: 14px; }
 
@@ -4527,6 +4531,65 @@ a.text-dark:hover, a.text-dark:focus {
   text-align: center; }
   .separator_style_about {
     margin-bottom: 96px; }
+
+.sort {
+  text-align: center;
+  margin-top: 23px; }
+  .sort .sort__item {
+    color: white;
+    display: inline;
+    font-family: Lato-Bold;
+    font-size: 16px;
+    line-height: 22px;
+    color: white;
+    cursor: pointer;
+    padding: 0 8px 0 8px; }
+    .sort .sort__item:hover {
+      color: #ff0036; }
+
+.portfolio-gallery {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-flow: row wrap;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap; }
+  .portfolio-gallery__img-container {
+    position: relative; }
+  .portfolio-gallery__hover-content {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-flow: column;
+        -ms-flex-flow: column;
+            flex-flow: column;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: none; }
+  .portfolio-gallery__text {
+    font-family: Lato-Regular;
+    font-size: 16px;
+    line-height: 22px;
+    color: white; }
+  .portfolio-gallery__img {
+    display: block; }
 
 @font-face {
   font-family: "Lato-Black";

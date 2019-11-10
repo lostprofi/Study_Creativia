@@ -1,0 +1,22 @@
+.sort {
+    text-align: center;
+    margin-top: 23px;
+    
+    
+    .sort__item{
+        color: rgb(255, 255, 255);
+        display: inline;
+        font-family: Lato-Bold;
+        font-size: 16px;
+        line-height: 22px;
+        color: rgb(255, 255, 255);
+        cursor: pointer;
+        
+        padding: 0 8px 0 8px;
+    
+        
+        &:hover{
+            color: rgb(255, 0, 54);
+        }
+    }
+}

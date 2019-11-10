@@ -1,0 +1,35 @@
+.portfolio-gallery {
+    display: flex;
+    flex-flow: row wrap;
+    
+    &__img-container {
+        position: relative;
+    }
+    
+    &__hover-content {
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        display: none;
+        
+        
+        
+    }
+    
+    &__text {
+        font-family: Lato-Regular;
+        font-size: 16px;
+        line-height: 22px;
+        color: rgb(255, 255, 255);
+    }
+    
+    &__img {
+        display: block;
+    }
+}
