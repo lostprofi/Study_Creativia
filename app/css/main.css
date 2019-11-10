@@ -4286,6 +4286,10 @@ a.text-dark:hover, a.text-dark:focus {
   line-height: 20px;
   letter-spacing: normal;
   margin-top: 4px; }
+  .carousel-item__btn:first-child {
+    margin-right: 28px; }
+  .carousel-item__btn:last-child {
+    padding: 14px 37px 15px 40px; }
 
 .carousel-item_align_center {
   text-align: center; }
@@ -4518,6 +4522,11 @@ a.text-dark:hover, a.text-dark:focus {
     transition: 2s; }
     .card__toggle-content_style_about {
       margin-top: 14px; }
+
+.separator {
+  text-align: center; }
+  .separator_style_about {
+    margin-bottom: 96px; }
 
 @font-face {
   font-family: "Lato-Black";

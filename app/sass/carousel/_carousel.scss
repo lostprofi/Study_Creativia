@@ -32,6 +32,14 @@
         letter-spacing: normal;
         margin-top: 4px;
         
+        &:first-child{
+            margin-right:28px;
+        }
+        
+        &:last-child {
+            padding: 14px 37px 15px 40px;
+        }
+        
         
     }
     
