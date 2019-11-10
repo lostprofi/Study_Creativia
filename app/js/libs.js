@@ -199,9 +199,6 @@ window.onload = () =>{
         cardTitle.style.color = 'rgb(255, 0, 54)';
        
         cardToggleContent.style.height = `${cardToggleContent.dataset.height}`;
-                
-                
-    }
         
         
         e.currentTarget.removeEventListener('click', cardToggleDownCallbackFunc);
