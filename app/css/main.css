@@ -4166,10 +4166,10 @@ a.text-dark:hover, a.text-dark:focus {
       margin-bottom: -2px;
       z-index: -2; }
   .page__section {
-    margin-top: 94px; }
+    padding-top: 94px;
+    padding-bottom: 85px; }
 
 .header {
-  padding: 95px 0 0 0;
   position: relative;
   text-align: center; }
   .header_bgnd_dark {
