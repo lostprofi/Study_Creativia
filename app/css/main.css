@@ -4166,8 +4166,7 @@ a.text-dark:hover, a.text-dark:focus {
       margin-bottom: -2px;
       z-index: -2; }
   .page__section {
-    padding-top: 94px;
-    padding-bottom: 85px; }
+    padding-top: 94px; }
 
 .header {
   position: relative;
@@ -4229,6 +4228,12 @@ a.text-dark:hover, a.text-dark:focus {
     margin-bottom: 94px; }
   .container_style_about {
     padding: 0; }
+  .container__features_left {
+    padding-left: 0;
+    padding-right: 20px; }
+  .container__features_right {
+    padding-left: 20px;
+    padding-right: 0; }
 
 .aside {
   font-family: Lato-Regular;
@@ -4343,19 +4348,94 @@ a.text-dark:hover, a.text-dark:focus {
   color: white;
   text-decoration: none;
   display: inline-block;
-  background-color: black; }
+  background-color: black;
+  cursor: pointer; }
+  .btn__object_right {
+    margin: 0 10px 0 18px; }
+  .btn__object_left {
+    margin: 0 18px 0 10px; }
   .btn_active {
     background-color: #ff0036; }
+  .btn_style_lazy-load {
+    padding: 14px 34px 15px 36px;
+    font-size: 20px;
+    line-height: 20px;
+    border: none;
+    color: white;
+    background-color: #ff0036;
+    margin: 20px auto; }
+    .btn_style_lazy-load:active {
+      background-color: black; }
+    .btn_style_lazy-load:focus {
+      outline-color: white; }
+  .btn_style_features-left {
+    display: block;
+    width: 100%;
+    border: 1px solid #e7e7e7;
+    background-color: white;
+    font-size: 20px;
+    color: black;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-flow: row nowrap;
+        -ms-flex-flow: row nowrap;
+            flex-flow: row nowrap;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: end;
+    -webkit-justify-content: flex-end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    padding: 10px 10px 10px 10px;
+    margin-bottom: 24px; }
+    .btn_style_features-left:hover {
+      background-color: #ff0036;
+      color: white; }
+    .btn_style_features-left:focus {
+      outline: none; }
+  .btn_style_features-right {
+    display: block;
+    width: 100%;
+    border: 1px solid #e7e7e7;
+    background-color: white;
+    font-size: 20px;
+    color: black;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-flow: row nowrap;
+        -ms-flex-flow: row nowrap;
+            flex-flow: row nowrap;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    padding: 10px 10px 8px 10px;
+    margin-bottom: 24px; }
+    .btn_style_features-right:hover {
+      background-color: #ff0036;
+      color: white; }
+    .btn_style_features-right:focus {
+      outline: none; }
   .btn__span {
     border-right: 1px solid #e7e7e7;
     display: inline-block;
     padding: 9px 21px 10px 20px; }
     .btn__span_mr_30 {
       margin-right: 30px; }
-  .btn__h1 {
-    margin-top: 27px;
-    font-size: 20px;
-    text-align: center; }
 
 .section_color_light {
   background-color: white; }
@@ -4363,13 +4443,16 @@ a.text-dark:hover, a.text-dark:focus {
 .section_color_dark {
   background-color: black; }
 
+.section_style_about {
+  padding-bottom: 85px; }
+
+.section_style_portfolio {
+  text-align: center; }
+
 .text_color-light {
   color: white; }
 
-.text_color-dark {
-  color: black; }
-
-.text_style_heading-about {
+.text_style_heading {
   font-family: Lato-Bold;
   font-size: 16px;
   font-weight: normal;
@@ -4399,6 +4482,13 @@ a.text-dark:hover, a.text-dark:focus {
   letter-spacing: normal;
   color: black;
   text-align: justify; }
+
+.text_style_lazy-load-finish {
+  font-family: Lato-Regular;
+  font-size: 16px;
+  line-height: 22px;
+  color: white;
+  text-align: center; }
 
 .text__span {
   color: #ff0036; }
@@ -4496,6 +4586,12 @@ a.text-dark:hover, a.text-dark:focus {
 .row_style_about {
   margin: 0; }
 
+.row__img-container {
+  height: 500px;
+  background: url(../../img/product-features/tablet.png);
+  background-position: bottom -52px left -52px;
+  padding: 0; }
+
 .card {
   text-align: center; }
   .card__head {
@@ -4528,9 +4624,14 @@ a.text-dark:hover, a.text-dark:focus {
       margin-top: 14px; }
 
 .separator {
-  text-align: center; }
+  text-align: center;
+  position: relative; }
   .separator_style_about {
     margin-bottom: 96px; }
+  .separator__img {
+    position: absolute;
+    bottom: -10px;
+    right: 450px; }
 
 .sort {
   text-align: center;
@@ -4556,14 +4657,21 @@ a.text-dark:hover, a.text-dark:focus {
   -webkit-box-direction: normal;
   -webkit-flex-flow: row wrap;
       -ms-flex-flow: row wrap;
-          flex-flow: row wrap; }
+          flex-flow: row wrap;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
   .portfolio-gallery__img-container {
-    position: relative; }
+    position: relative;
+    overflow: hidden; }
+    .portfolio-gallery__img-container:hover > div {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      z-index: 2; }
   .portfolio-gallery__hover-content {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -webkit-flex-flow: column;
@@ -4582,7 +4690,12 @@ a.text-dark:hover, a.text-dark:focus {
     right: 0;
     bottom: 0;
     left: 0;
-    display: none; }
+    display: none;
+    background-color: black;
+    cursor: pointer; }
+    .portfolio-gallery__hover-content:active {
+      -webkit-box-shadow: inset 0 0 8px 2px white;
+              box-shadow: inset 0 0 8px 2px white; }
   .portfolio-gallery__text {
     font-family: Lato-Regular;
     font-size: 16px;

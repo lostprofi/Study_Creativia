@@ -93,11 +93,11 @@
             </div>
         </aside>
         
-        <section class = "section section_color_light page__section">
+        <section class = "section section_color_light page__section section_style_about">
             <div class = "container container_style_about">
                 <header class = "header container__header">
                     <h1 class = "title header__title">about<span class = "title__span">creativia</span></h1>
-                    <p class = "text text_style_heading-about">Lorem ipsum dolor sit amet, consectetur <span class = "text__span">adipiscing elit.</span> Integer sed magna vel velit dignissim luctus eu in urna. Dapibus egestas turpis.</p>
+                    <p class = "text text_style_heading">Lorem ipsum dolor sit amet, consectetur <span class = "text__span">adipiscing elit.</span> Integer sed magna vel velit dignissim luctus eu in urna. Dapibus egestas turpis.</p>
                     
                 </header>
                 
@@ -206,16 +206,16 @@
             </div>
         </section>
         
-        <section class = "section section_color_dark page__section">
+        <section class = "section section_color_dark page__section section_style_portfolio">
             <header class = "header container__header">
                 
                 <h1 class = "title title_color_light">portfolio</h1>
                 
                 <ul class = "sort">
-                    <li class = "sort__item">ALL</li>
-                    <li class = "sort__item">ILLUSTRATION</li>
-                    <li class = "sort__item">DIGITAL ART</li>
-                    <li class = "sort__item">WEB DESIGN</li>
+                    <li class = "sort__item" id = "all-btn">ALL</li>
+                    <li class = "sort__item" id = "illustration-btn">ILLUSTRATION</li>
+                    <li class = "sort__item" id = "dig-art-btn">DIGITAL ART</li>
+                    <li class = "sort__item" id = "web-design-btn">WEB DESIGN</li>
                 </ul>
                 
             </header>
@@ -236,7 +236,7 @@
                         <p class = "portfolio-gallery__text">design name</p>
                     </div>
                     
-                    <img class = "portfolio-gallery__img" src = "img/portfolio/bank.png" alt = "dollars"/>
+                    <img class = "portfolio-gallery__img" src = "img/portfolio/bank.png" alt = "bank"/>
                 </div>
                 
                 <div class = "portfolio-gallery__img-container">
@@ -245,7 +245,7 @@
                         <p class = "portfolio-gallery__text">design name</p>
                     </div>
                     
-                    <img class = "portfolio-gallery__img" src = "img/portfolio/money-flowers.png" alt = "dollars"/>
+                    <img class = "portfolio-gallery__img" src = "img/portfolio/money-flowers.png" alt = "money-flowers"/>
                 </div>
                 
                 <div class = "portfolio-gallery__img-container">
@@ -254,7 +254,7 @@
                         <p class = "portfolio-gallery__text">design name</p>
                     </div>
                     
-                    <img class = "portfolio-gallery__img" src = "img/portfolio/credit-cards.png" alt = "dollars"/>
+                    <img class = "portfolio-gallery__img" src = "img/portfolio/credit-cards.png" alt = "credit-cards"/>
                 </div>
                 
                 <div class = "portfolio-gallery__img-container">
@@ -263,7 +263,7 @@
                         <p class = "portfolio-gallery__text">design name</p>
                     </div>
                     
-                    <img class = "portfolio-gallery__img" src = "img/portfolio/calculator.png" alt = "dollars"/>
+                    <img class = "portfolio-gallery__img" src = "img/portfolio/calculator.png" alt = "calculator"/>
                 </div>
                 
                 <div class = "portfolio-gallery__img-container">
@@ -272,7 +272,7 @@
                         <p class = "portfolio-gallery__text">design name</p>
                     </div>
                     
-                    <img class = "portfolio-gallery__img" src = "img/portfolio/converter.png" alt = "dollars"/>
+                    <img class = "portfolio-gallery__img" src = "img/portfolio/converter.png" alt = "converter"/>
                 </div>
                 
                 <div class = "portfolio-gallery__img-container">
@@ -281,7 +281,7 @@
                         <p class = "portfolio-gallery__text">design name</p>
                     </div>
                     
-                    <img class = "portfolio-gallery__img" src = "img/portfolio/pocketmaney.png" alt = "dollars"/>
+                    <img class = "portfolio-gallery__img" src = "img/portfolio/pocketmoney.png" alt = "pocketmoney"/>
                 </div>
                 
                 <div class = "portfolio-gallery__img-container">
@@ -290,9 +290,49 @@
                         <p class = "portfolio-gallery__text">design name</p>
                     </div>
                     
-                    <img class = "portfolio-gallery__img" src = "img/portfolio/check.png" alt = "dollars"/>
+                    <img class = "portfolio-gallery__img" src = "img/portfolio/check.png" alt = "check"/>
+                </div>
+                
+                
+                
+            </div>
+            
+            <div class = "lazy-load portfolio-gallery">
+                
+            </div>
+            
+            <button class = "btn btn_style_lazy-load" id = "porfolio-lazy-btn">SHOW MORE</button>
+            
+            <div class = "separator">
+                <img class = "separator__img" src = "img/scrollbar/scroll-red.png" alt = "separator" />
+            </div>
+        </section>
+        
+        <section class = "section section_color_light page__section">
+            <header class = "header container__header">
+                <h1 class = "title title_color_dark header__title">our <span class = "title__span">product features</span></h1>
+                <p class = "text text_style_heading">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sed magna vel velit dignissim luctus eu in urna. Dapibus egestas turpis.</p>
+            </header>
+            <div class = "container">
+                <div class = "row">
+                    <div class = "col-4 container__features container__features_left">
+                        <button class = "btn btn_style_features-left" name = "btn-ftrd">UNLIMITED COLOR OPTIONS <object class = "btn__object btn__object_right" type = "image/svg+xml" data = "img/product-features/hex-sm-grey.svg"></object> </button>
+                        <button class = "btn btn_style_features-left" name = "btn-ftrd">OUTSTANDING SUPPORT <object class = "btn__object btn__object_right" type = "image/svg+xml" data = "img/product-features/hex-sm-grey.svg"></object> </button>
+                        <button class = "btn btn_style_features-left" name = "btn-ftrd">RETINA READY <object class = "btn__object btn__object_right" type = "image/svg+xml" data = "img/product-features/hex-sm-grey.svg"></object> </button>
+                    </div>
+                    <div class = "col-4 row__img-container">
+                        
+                    </div>
+                    <div class = "col-4 container__features container__features_right">
+                        <button class = "btn btn_style_features-right" name = "btn-ftrd"><object class = "btn__object btn__object_left" type = "image/svg+xml" data = "img/product-features/hex-sm-grey.svg"></object> UNLIMITED COLOR OPTIONS </button>
+                        <button class = "btn btn_style_features-right" name = "btn-ftrd"><object class = "btn__object btn__object_left" type = "image/svg+xml" data = "img/product-features/hex-sm-grey.svg"></object> OUTSTANDING SUPPORT</button>
+                        <button class = "btn btn_style_features-right" name = "btn-ftrd"><object class = "btn__object btn__object_left" type = "image/svg+xml" data = "img/product-features/hex-sm-grey.svg"></object> RETINA READY</button>
+                    </div>
+                    
+                
                 </div>
             </div>
+            
         </section>
         
         

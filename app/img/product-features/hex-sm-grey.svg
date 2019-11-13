@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="37" height="32" viewBox="0 0 37 32">
+  
+<defs>
+    <style>
+      
+	  
+	  <![CDATA[
+		
+      .active-hex-ftrd {
+        fill: #e7e7e7;
+        fill-rule: evenodd;
+		cursor: pointer;
+      }
+	  
+	  .passive-hex-ftrd {
+		fill: rgb(255,255,255);
+        fill-rule: evenodd;
+		cursor: pointer;
+	  }
+	  
+	  .active-svg-ftrd{
+	  display: inline;
+	  }
+	  
+	.passive-svg-ftrd{
+		display: none;
+	  }
+		]]>
+    </style>
+  </defs>
+  
+	<g class = "active-svg-ftrd">
+		<path   class="active-hex-ftrd" d="M435.251,3442.59l-9.25-16,9.25-16h18.5l9.249,16-9.249,16h-18.5Z" transform="translate(-426 -3410.59)"/>
+		<image xlink:href = "check-dark.png" x = "12" y = "12" cursor = "pointer"/>
+	</g>
+
+	<g class = "passive-svg-ftrd">
+		<path   class="passive-hex-ftrd" d="M435.251,3442.59l-9.25-16,9.25-16h18.5l9.249,16-9.249,16h-18.5Z" transform="translate(-426 -3410.59)"/>
+		<image xlink:href = "check-red.png" x = "12" y = "12" cursor = "pointer"/>
+	</g>
+</svg>

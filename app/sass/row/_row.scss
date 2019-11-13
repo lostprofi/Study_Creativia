@@ -4,4 +4,12 @@
     &_style_about {
         margin: 0;
     }
+    
+    &__img-container {
+        height: 500px;
+        background: url(../../img/product-features/tablet.png);
+        background-position: bottom -52px left -52px;
+        padding: 0;
+        
+    }
 }

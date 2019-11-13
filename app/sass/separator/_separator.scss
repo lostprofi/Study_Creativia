@@ -1,8 +1,16 @@
 .separator {
     text-align: center;
+    position: relative;
     
     &_style_about {
         margin-bottom: 96px;
     }
     
+    &__img{
+        position: absolute;
+        bottom: -10px;
+        right: 450px;
+    }
+    
+        
 }

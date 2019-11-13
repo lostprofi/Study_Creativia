@@ -4,14 +4,9 @@
         color: rgb(255, 255, 255);
     }
     
-    &_color-dark{
-        
-        
-      
-        color: rgb(0, 0, 0);
-    }
     
-    &_style_heading-about {
+    
+    &_style_heading {
          font-family: Lato-Bold;
         font-size: 16px;
         font-weight: normal;
@@ -48,6 +43,15 @@
         letter-spacing: normal;
         color: rgb(0, 0, 0);
         text-align: justify;
+    }
+    
+    &_style_lazy-load-finish {
+        font-family: Lato-Regular;
+        font-size: 16px;
+        line-height: 22px;
+        color: rgb(255, 255, 255);
+        text-align: center;
+       
     }
     
     

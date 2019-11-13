@@ -239,59 +239,124 @@ window.onload = () =>{
     cardCleanIconWrapper.addEventListener('click', cardToggleDownCallbackFunc);
     
     
+    //featured hovers//
     
-}
-/*  
-
-window.onload = () =>{
-    
-    let flatIcon = document.getElementById('flat-icon');
-    let retinaIcon = document.getElementById('retina-icon');
-    let responsiveIcon = document.getElementById('responsive-icon');
-    let flameIcon = document.getElementById('flame-icon');
-    
-    let svgIconsMassive = [flatIcon, retinaIcon, responsiveIcon, flameIcon];
+    let btnFtrd = document.getElementsByName('btn-ftrd');
+    btnFtrd = Array.from(btnFtrd);
     
     
-    svgIconsMassive.forEach(el=>{
+    btnFtrd.forEach(el=>{
+    
+    let objFtrd = el.querySelector('object');
         
-        let iconDoc = el.contentDocument;
+    let objFtrdDoc = objFtrd.contentDocument;
         
-        let iconUnactiveGroup = iconDoc.querySelector('.unactive-group');
+    let activeHexFtrd = objFtrdDoc.querySelector('.active-svg-ftrd');
+    let passiveHexFtrd = objFtrdDoc.querySelector('.passive-svg-ftrd');
+    
+    const mouseOverFtrdCallback = (e) =>{
         
-        let iconActiveGroup = iconDoc.querySelector('.active-group');
+        passiveHexFtrd.style.display = "inline";
+        activeHexFtrd.style.display = "none";
         
-        let clickEl = el.previousElementSibling;
+        e.currentTarget.removeEventListener('mouseover', mouseOverFtrdCallback);
+        e.currentTarget.addEventListener('mouseout', mouseOutFtrdCallback);
         
-        let toggleContent = el.parentElement.nextElementSibling;
-        
-         let toggleDownFuncSvg = ()=>{
-            iconUnactiveGroup.style.display = "none";
-            iconActiveGroup.style.display = "inline";
-            toggleContent.style.height = "80px";
-        };
-         
-         let toggleUpFuncSvg = ()=>{
-            iconActiveGroup.style.display = "none";
-            iconUnactiveGroup.style.display = "inline";
-            toggleContent.style.height = "0";
+    }
+    
+    const mouseOutFtrdCallback = (e) =>{
        
-        };
+        passiveHexFtrd.style.display = "none";
+        activeHexFtrd.style.display = "inline";
         
-         let toggleDownFunc = (e) =>{
-            toggleDownFuncSvg();
-            e.currentTarget.removeEventListener('click', toggleDownFunc);
-            e.currentTarget.addEventListener('click', toggleUpFunc);
-        }
-         
-         let toggleUpFunc = (e) =>{
-            toggleUpFuncSvg();
-            e.currentTarget.removeEventListener('click', toggleUpFunc);
-            e.currentTarget.addEventListener('click', toggleDownFunc);
-        }
+        e.currentTarget.removeEventListener('mouseout', mouseOutFtrdCallback);
+        e.currentTarget.addEventListener('mouseover', mouseOverFtrdCallback);
         
+    }
         
-        clickEl.addEventListener('click', toggleDownFunc);
+        el.addEventListener('mouseover', mouseOverFtrdCallback);
     })
     
-};*/
+    
+}
+
+
+// lazy load //
+
+const template = document.querySelector('.portfolio-gallery__img-container');
+
+const portfolioLazyBtn = document.getElementById('porfolio-lazy-btn');
+
+let porfolioContent = '{"content": [ [{"src": "img/portfolio/money-flowers.png", "alt": "money-flowers"} , {"src": "img/portfolio/calculator.png", "alt": "calculator"}, {"src": "img/portfolio/converter.png", "alt": "converter"}, {"src": "img/portfolio/bank.png", "alt": "bank"}], [{"src": "img/portfolio/check.png", "alt": "check"} , {"src": "img/portfolio/dollars.png", "alt": "dollars"}, {"src": "img/portfolio/credit-cards.png", "alt": "credit-cards"}, {"src": "img/portfolio/pocketmoney.png", "alt": "pocketmoney"}]]}';
+
+porfolioContent = JSON.parse(porfolioContent);
+
+let i = 0;
+
+const lazyLoad = (e) => {
+    
+  
+    try {
+        
+        porfolioContent.content[i].forEach(el=>{
+            
+            const a = template.cloneNode(true);
+            
+            a.querySelector('.portfolio-gallery__img').setAttribute('src', `${el.src}`);
+            a.querySelector('.portfolio-gallery__img').setAttribute('alt', `${el.alt}`);
+            
+            
+            document.querySelector('.lazy-load').appendChild(a);
+        }); 
+        
+       
+        
+     
+       i=i+1; 
+        
+    }
+    
+    catch {
+        
+        i = 0;
+        
+        e.currentTarget.removeEventListener('click', lazyLoad);
+    
+        let endText = document.createElement('p');
+    
+        endText.setAttribute('class', 'text text_style_lazy-load-finish');
+        document.querySelector('.lazy-load').appendChild(endText);
+        endText.style.marginTop = "1%";
+        endText.innerHTML = "Sorry, it's over";
+        portfolioLazyBtn.innerHTML = 'TURN ASIDE';
+    
+        e.currentTarget.addEventListener('click', lazyReload);
+    
+}
+
+    
+}
+
+
+const lazyReload = (e) =>{
+    
+    let lazyData = document.querySelector('.lazy-load');
+    
+    while(lazyData.firstChild){
+        lazyData.removeChild(lazyData.firstChild);
+    }
+    
+    e.currentTarget.innerHTML = "SHOW MORE";
+    
+    e.currentTarget.removeEventListener('click', lazyReload);
+    
+     e.currentTarget.addEventListener('click', lazyLoad);
+    
+}
+
+
+
+
+portfolioLazyBtn.addEventListener('click',lazyLoad);
+
+
