@@ -1,46 +1,49 @@
 .text {
     
-    &_color-light{
+    font-family: Lato-Regular;
+    font-size: 16px;
+    
+    
+    
+    &_color_light{
         color: rgb(255, 255, 255);
     }
     
     
     
     &_style_heading {
-         font-family: Lato-Bold;
+         //font-family: Lato-Bold;
         font-size: 16px;
-        font-weight: normal;
-        font-style: normal;
+        font-weight: 400;
+        //font-style: normal;
         line-height: 22px;
-        letter-spacing: normal;
-        color: rgb(0, 0, 0);
+        //letter-spacing: normal;
+       
    
    
     }
     
     &_style_content-about {
-        font-family: Lato-Regular;
-        font-size: 16px;
-        font-weight: normal;
-        font-style: normal;
+        //font-family: Lato-Regular;
+        //font-size: 16px;
+        //font-weight: normal;
+        //font-style: normal;
         line-height: 22px;
-        letter-spacing: normal;
+        //letter-spacing: normal;
         color: rgb(0, 0, 0);
         text-align: justify;
         margin-left: -15px;
         margin-bottom: 21px;
         
-   
-   
     }
     
     &_style_toggle-about {
-        font-family: Lato-Regular;
+        //font-family: Lato-Regular;
         font-size: 14px;
-        font-weight: normal;
-        font-style: normal;
+        //font-weight: normal;
+        //font-style: normal;
         line-height: 22px;
-        letter-spacing: normal;
+        //letter-spacing: normal;
         color: rgb(0, 0, 0);
         text-align: justify;
     }
@@ -53,6 +56,15 @@
         text-align: center;
        
     }
+    
+    &_style_our-clients {
+        color: rgb(164,164,164);
+        line-height: 22px;
+        text-align: center;
+        
+    }
+    
+  
     
     
     

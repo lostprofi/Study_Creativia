@@ -8,6 +8,20 @@
         
     }
     
+    &__indicators {
+        
+        >li{
+            width: 8px;
+            height: 8px;
+            
+        }
+        
+        >.active {
+            background-color: rgb(255,0,54);
+        }
+        
+}
+    
 }
 
 
@@ -96,4 +110,5 @@
 }
 
 //
+
 

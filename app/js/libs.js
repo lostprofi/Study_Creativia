@@ -278,7 +278,7 @@ window.onload = () =>{
     })
     
     
-}
+};
 
 
 // lazy load //

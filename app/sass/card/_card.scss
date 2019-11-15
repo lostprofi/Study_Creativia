@@ -1,6 +1,7 @@
 .card {
     text-align: center;
     
+    
     &__head{
         
         position: relative;
@@ -42,6 +43,18 @@
             
              margin-top: 14px;
         }
+    }
+    
+    &__figcaption {
+        
+        &_style_our-clients{
+            
+            font-family: Raleway-Bold;
+            font-size: 16px;
+            color: rgb(255, 0, 54);
+            padding: 10px 0;
+        }
+        
     }
     
 }

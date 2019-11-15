@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="66" height="57" viewBox="0 0 66 57">
+
+<defs>
+
+    <style>
+	
+	<![CDATA[
+      .cls-1 {
+        fill: #a8a8a8;
+        fill-rule: evenodd;
+      }
+	  ]]>
+    </style>
+  </defs>
+  
+  <path id="Shape_2_copy_4" data-name="Shape 2 copy 4" class="cls-1" d="M381.5,4424.99L365,4396.5l16.5-28.5h33l16.5,28.5-16.5,28.49h-33Z" transform="translate(-365 -4368)"/>
+	<image xlink:href = "amr-spour.png" x = "0" y = "0"/>
+</svg>
