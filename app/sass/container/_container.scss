@@ -5,14 +5,13 @@
         margin-bottom: 94px;
     }
     
-    &_style_about {
-        padding: 0;
-        
+      
+    
+    &_style_teamwork, &_style_features, &_style_about, &_style_our-clients {
+        padding: 0 0 96px 0;
     }
     
-    &_style_our-clients{
-        padding-bottom: 96px;
-    }
+    
     
     &__features{
         &_left{
