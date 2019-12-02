@@ -1,0 +1,98 @@
+.loader {
+    position: relative;
+    user-select: none;
+    margin: 0 auto;
+    
+    &__span {
+        color: rgb(0,0,0);
+    }
+    
+    &__background {
+        width: 100%;
+        height: 100%;
+        border: 5px solid rgb(224, 224, 224);
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    &__spinner-container {
+        position: absolute;
+        top: 0;
+        left: 0;
+        overflow: hidden;
+        width: 50%;
+        height: 50%;
+        background: transparent;
+        
+        &_first-quarter {
+            transform: rotate(90deg);
+            transform-origin: 100% 100%;
+        }
+        
+        &_second-quarter {
+            transform: rotate(180deg);
+            transform-origin: 100% 100%;
+        }
+        
+        &_third-quarter {
+            transform: rotate(270deg);
+            transform-origin: 100% 100%;
+        }
+        
+        &_fourth-quarter {
+            transform: rotate(0deg);
+            transform-origin: 100% 100%;
+        }
+    }
+    
+    &__spinner-holder {
+        position: absolute;
+        top: 0;
+        left: 0;
+        overflow: hidden;
+        background: transparent;
+        width: 100%;
+        height: 100%;
+        
+        &_animate_0-25  {
+            transform: rotate(-90deg);
+            transform-origin: 100% 100%;
+            transition: 2s linear;
+        }
+        
+        &_animate_25-50  {
+            transform: rotate(-90deg);
+            transform-origin: 100% 100%;
+            transition: 2s linear;
+            transition-delay: 2s;
+        }
+        &_animate_50-75  {
+            transform: rotate(-90deg);
+            transform-origin: 100% 100%;
+            transition: 2s linear;
+            transition-delay: 4s;
+        }
+        &_animate_75-100  {
+            transform: rotate(-90deg);
+            transform-origin: 100% 100%;
+            transition: 2s linear;
+            transition-delay: 6s;
+        }
+        
+    }
+    
+    &__spinner {
+        width: 200%;
+        height: 200%;
+        border-radius: 50%;
+        border: 5px solid rgb(244, 0, 54);
+    }
+    
+    &_size_xl {
+        width: 146px;
+        height: 146px;
+    }
+    
+}

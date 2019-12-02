@@ -354,9 +354,154 @@ const lazyReload = (e) =>{
     
 }
 
-
-
-
 portfolioLazyBtn.addEventListener('click',lazyLoad);
+
+//loader//
+
+let loaderOne = document.getElementById('loader-one');
+let loaderTwo = document.getElementById('loader-two');
+let loaderThree = document.getElementById('loader-three');
+let loaderFour = document.getElementById('loader-four');
+let loaderContainer = document.getElementById('loader-container');
+
+
+const renderProgress = (elem, progressValue) => {
+    
+    let progress = Math.floor(progressValue);
+    
+    if(progress<25){
+        let angle = -90 + (progress/100)*360;
+        elem.querySelector('.loader__spinner-holder_animate_0-25').style.transform = 'rotate(' + angle + 'deg)';
+    }
+    
+    else if (progress>=25 && progress <50){
+        let angle = -90 + ((progress-25)/100)*360;
+        
+        elem.querySelector('.loader__spinner-holder_animate_0-25').style.transform = 'rotate(0deg)';
+        
+        elem.querySelector('.loader__spinner-holder_animate_25-50').style.transform = 'rotate(' + angle + 'deg)';
+    }
+    
+    else if (progress>=50 && progress <75){
+        let angle = -90 + ((progress-50)/100)*360;
+        
+        elem.querySelector('.loader__spinner-holder_animate_0-25').style.transform = 'rotate(0deg)';
+        
+        elem.querySelector('.loader__spinner-holder_animate_25-50').style.transform = 'rotate(0deg)';
+        
+        elem.querySelector('.loader__spinner-holder_animate_50-75').style.transform = 'rotate(' + angle + 'deg)';
+    }
+    
+    else if (progress>=75 && progress <=100){
+        let angle = -90 + ((progress-75)/100)*360;
+        
+        elem.querySelector('.loader__spinner-holder_animate_0-25').style.transform = 'rotate(0deg)';
+        
+        elem.querySelector('.loader__spinner-holder_animate_25-50').style.transform = 'rotate(0deg)';
+        
+        elem.querySelector('.loader__spinner-holder_animate_50-75').style.transform = 'rotate(0deg)';
+        
+        elem.querySelector('.loader__spinner-holder_animate_75-100').style.transform = 'rotate(' + angle + 'deg)';
+    }
+    
+    let loadValue = elem.querySelector('.text_style_loader');
+    
+    let count = 0;
+    
+    let interval = setInterval(function(){
+        count++;
+        loadValue.innerHTML = `${count}`;
+        let loaderSpan = document.createElement("span");
+        loaderSpan.innerHTML = "%";
+        loaderSpan.setAttribute('class', 'loader__span');
+        loadValue.appendChild(loaderSpan);
+        
+        if(count===progress){
+            clearInterval(interval);
+        }
+    }, 80);
+    
+}
+
+const scrolling = el =>{
+
+  const isPartiallyVisibleBottom = el =>{
+    const elementBoundary = el.getBoundingClientRect();//возвращает объект, который является объединением прямоугольников для этого объекта
+
+    const top = elementBoundary.top;//считытваем значение свойства top, объекта elementBoundary
+    const bottom = elementBoundary.bottom;//считытваем значение свойства bottom, объекта elementBoundary
+    const height = elementBoundary.height;//считытваем значение свойства height, объекта elementBoundary
+    return (top + height) > window.innerHeight &&  bottom < (height + window.innerHeight) ? true:false;//условие, когда элемент не виден или не полностью виден свеху или снизу
+  }
+
+  const isPartiallyVisibleTop = el =>{
+    const elementBoundary = el.getBoundingClientRect();//возвращает объект, который является объединением прямоугольников для этого объекта
+
+    const top = elementBoundary.top;//считытваем значение свойства top, объекта elementBoundary
+    const bottom = elementBoundary.bottom;//считытваем значение свойства bottom, объекта elementBoundary
+    const height = elementBoundary.height;//считытваем значение свойства height, объекта elementBoundary
+    return bottom < height && (top + height) > 0 ? true:false;
+  }
+
+  const isFullyVisible = el =>{
+    const elementBoundary = el.getBoundingClientRect();
+
+    const top = elementBoundary.top;
+    const bottom = elementBoundary.bottom;
+    const height = elementBoundary.height;
+
+    return top >= 0 && bottom <= window.innerHeight ? true:false;
+  }
+
+  if (isFullyVisible(el) || isPartiallyVisibleTop(el) || isPartiallyVisibleBottom(el)){
+      
+      renderProgress(loaderOne, 90);
+      renderProgress(loaderTwo, 80);
+      renderProgress(loaderThree, 70);
+      renderProgress(loaderFour, 90);
+      
+      window.removeEventListener('scroll', eventListenerScroll);
+  }
+    
+ 
+    
+
+  console.log('Partially visible top: ' + isPartiallyVisibleTop(el));
+  console.log('Partially visible bottom: ' + isPartiallyVisibleBottom(el));
+  console.log('Full visible: ' + isFullyVisible(el));
+}
+
+let isScrolling = false;
+
+const throttleScroll = el_one => {
+  if(isScrolling === false){
+    window.requestAnimationFrame(function(){
+        
+      scrolling(el_one);
+
+      isScrolling = false;
+    })
+    isScrolling = true;
+  }
+}
+
+const eventListenerScroll = () =>{
+    throttleScroll(loaderContainer);
+    
+}
+
+window.addEventListener('scroll', eventListenerScroll);
+
+
+
+
+
+
+
+
+
+
+
+
 
 

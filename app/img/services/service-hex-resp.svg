@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="66" height="57" viewBox="0 0 66 57">
+
+<defs>
+    <style>
+      .cls-1 {
+        fill: rgb(164, 164, 164);
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <path class="cls-1" d="M132.5,6327L116,6298.5l16.5-28.5h33l16.5,28.5L165.5,6327h-33Z" transform="translate(-116 -6270)"/>
+  <image xlink:href = "resp.png" x = "16" y = "16"/>
+</svg>

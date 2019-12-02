@@ -24,6 +24,12 @@
             }
             
         }
+        
+        &_style_services {
+            display: flex;
+            flex-flow: row nowrap;
+            align-items: center;
+        }
     }
     
     &__hover {
@@ -71,6 +77,12 @@
         color: rgb(0, 0, 0);
         padding-top: 27px;
         padding-bottom: 14px;
+        
+        &_style_services {
+            color: rgb(255,255,255);
+            font-weight: normal;
+            padding: 0 0 0 30px;
+        }
     }
     
     &__caption {
@@ -92,6 +104,16 @@
             border-bottom: 2px solid rgb(231, 231, 231);
             border-left: 2px solid rgb(231, 231, 231);
             border-right: 2px solid rgb(231, 231, 231);
+        }
+        
+        &_style_services {
+            text-align: start;
+            padding: 54px 0 86px 30px;
+        }
+        
+        &_style_services-end {
+            text-align: start;
+            padding: 54px 0 0 30px;
         }
     }
     
