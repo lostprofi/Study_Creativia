@@ -1,0 +1,47 @@
+.offer {
+   
+    
+    &__inner {
+        border: 1px solid rgb(242, 242, 242);
+        
+        display: flex;
+        flex-flow: column nowrap;
+        text-align: center;
+       
+       
+        
+    }
+    
+    &__title {
+        padding: 16px 12px;
+        background-color: rgb(38, 38, 38);
+        color: rgb(255,255,255);
+        
+    }
+    
+    &__price {
+        padding: 16px 12px;
+        border-top: 1px solid rgb(242, 242, 242);
+        font-size: 50px;
+        font-weight: 800;
+        background-color: rgb(242, 242, 242);
+        
+    }
+    
+    &__specification {
+        border-top: 1px solid rgb(242, 242, 242);
+        padding: 16px 12px;
+        
+    }
+    
+    &:first-child{
+            padding-left: 0;
+        }
+        
+        &:last-child{
+            padding-right: 0;
+        }
+    
+   
+    
+}

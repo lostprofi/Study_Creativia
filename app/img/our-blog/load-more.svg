@@ -1,0 +1,13 @@
+<svg id="load_more" data-name="load more" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="43" height="43" viewBox="0 0 43 43">
+
+<defs>
+    <style>
+      .cls-1 {
+        fill: #f2f2f2;
+		cursor: pointer;
+      }
+    </style>
+  </defs>
+  <circle class="cls-1" cx="21.5" cy="21.5" r="21.5"/>
+  <image id="arrow" x="11" y="15" width="21" height="14" xlink:href="arrow.png" cursor = "pointer"/>
+</svg>

@@ -19,6 +19,20 @@
         padding-bottom: 94px;
     }
     
+    &__footer {
+        background: url(../img/plans/plns-bgnd.png);
+        background-size: cover;
+        height:294px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        
+        >object {
+            margin-bottom: 25px;
+        }
+    }
+    
     
     
 }

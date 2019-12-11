@@ -101,6 +101,42 @@
         
     }
     
+    &_style_reseller {
+
+        border: none;  
+        padding: 5px 64px 4px 52px;
+        font-size: 18px;
+        line-height: 1.65;
+        background-color: rgb(38,38,38);
+        &:focus {
+            outline: none;
+        }
+    }
+    
+    &_style_blog, &_style_blog-lazy {
+        font-family: Lato-Regular;
+        font-size: 16px;
+        border: none;
+        padding: 10px 14px;
+        background-color: rgb(38,38,38);
+        cursor: pointer;
+        
+        &:focus {
+            
+            outline: none;
+        }
+        
+        
+    
+    }
+    
+    &_style_load-more-blog{
+        margin: 0 auto;
+        background-color: transparent;
+        transition: 1s;
+        
+    }
+    
     &__span {
         
         border-right: 1px solid rgb(231, 231, 231);
@@ -109,7 +145,7 @@
         padding: 9px 21px 10px 20px;
         
         &_mr_30 {
-            margin-right: 30px;
+            margin-right: 17px 15px;
         }
         
     }

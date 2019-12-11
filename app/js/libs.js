@@ -1,3 +1,6 @@
+
+window.onload = () =>{
+
 //global variables
 
 
@@ -166,8 +169,7 @@ carouselBtnsNewArray.forEach((e)=>{
 
 
 
-window.onload = () =>{
-    
+
 
   
     /*card icons wrappers*/
@@ -278,7 +280,41 @@ window.onload = () =>{
     })
     
     
-};
+    //reseller btn click//
+
+    let resBtns = document.getElementsByClassName('btn_style_reseller');
+
+    resBtns = Array.from(resBtns);
+    console.log(resBtns);
+
+    resBtns.forEach(el=>{
+        
+        let n = 0;
+        
+        el.addEventListener('click', e=>{
+            
+            n=n+1;
+            
+            if(n & 1){
+                e.currentTarget.style.backgroundColor = "rgb(255,0,54)";
+                e.currentTarget.parentElement.parentElement.parentElement.querySelector('.offer__price').style.backgroundColor = "rgb(255, 0, 54)";
+                e.currentTarget.parentElement.parentElement.parentElement.querySelector('.offer__price').style.color = "rgb(255, 255, 255)";
+                e.currentTarget.parentElement.parentElement.parentElement.querySelector('.offer__price').style.borderTop = "rgb(255, 0, 54)";
+            }
+            
+            else {
+                e.currentTarget.style.backgroundColor = "rgb(38,38,38)";
+                e.currentTarget.parentElement.parentElement.parentElement.querySelector('.offer__price').style.backgroundColor = "rgb(242, 242, 242)";
+                e.currentTarget.parentElement.parentElement.parentElement.querySelector('.offer__price').style.color = "rgb(0, 0, 0)";
+                e.currentTarget.parentElement.parentElement.parentElement.querySelector('.offer__price').style.borderTop = "rgb(242, 242, 242)";
+            }
+            
+        })
+    
+    })
+    
+    
+
 
 
 // lazy load //
@@ -492,16 +528,169 @@ const eventListenerScroll = () =>{
 
 window.addEventListener('scroll', eventListenerScroll);
 
+//blog view more article data procedure///
+
+let blogArticleData = {
+    
+    articleDataFull: [ "Lorem ipsum dolor sit amet, voluptate convallis porttitor amet ipsum dolor, sed nostra risus. Nullam pellentesque nam suspendisse lorem et nulla, etiam ac feugiat tristique a tortor neque, eget sapien duis suspendisse ligula aenean eget, tristique ac rutrum mi, et ea eget. Sed dis ut nibh non, ut neque sed, dui euismod eget maecenas mauris donec elit. Aliquam nec, quam cursus iaculis tempor mauris, tempore pede aliquet optio viverra dolor amet. Mauris in mattis egestas fusce, mus at aliquam, wisi mattis nibh, vivamus in hendrerit. Ac ut aliquam at, suspendisse lacinia fermentum, egestas sed, facilisi vitae leo elit odio varius, luctus imperdiet. Rutrum molestie ante et duis pellentesque tempus. Massa massa sodales quam ligula, vivamus orci nam vitae facilisis integer. Dictumst dui neque elit quam interdum libero, lorem ante, torquent ac. Vitae urna, quisque sagittis sed platea egestas, et porta arcu, duis posuere mollis orci sit risus, nam semper et pellentesque ante. Integer etiam sagittis et, suspendisse eu, amet curabitur. Lorem nulla nec urna tellus ligula. Tincidunt consectetuer nec ante, eros in felis eu ut nibh, nullam integer eu integer turpis imperdiet. Vel metus justo sit mi tristique et, condimentum ut adipiscing dolor consequat ante. Ante integer ipsam egestas metus. Justo potenti, lectus vitae sed at semper. Sapien vel. At nulla ac ut, tempor tristique wisi diam pulvinar. Ornare sed vel eius justo eros nunc, et in libero sed. Convallis vel donec placeat, vel bibendum in est arcu. Purus augue massa aptent ad wisi nisl, lorem mus posuere mauris rutrum magnis diam. Fermentum felis laoreet pretium luctus habitasse, rutrum quis integer urna justo sit, non natoque purus id orci, id sed volutpat orci quam ut, in metus ac. Orci venenatis in faucibus aliquam, nec nam urna massa, tincidunt at libero eu rutrum, libero lacus ac sed wisi amet lorem, nulla porttitor fames suspendisse eu pretium. Integer nam sed nulla scelerisque, ut mattis nunc, a urna, elit blandit ultrices qui. Auctor nascetur incididunt morbi at tincidunt risus. Ipsum sed.Vestibulum velit turpis auctor morbi odio, neque interdum eget, sagittis odio sit neque massa at eu, lorem ornare in. Dolor nam fermentum et, ut est metus, bibendum magna integer arcu, cras ornare provident a nunc condimentum vestibulum, nisi luctus id eget. Vestibulum lectus, volutpat cras orci commodo curabitur eget commodo, donec quisque felis velit, accumsan fames lacinia massa libero. Vel eros platea duis eget, volutpat per egestas dolor ut, ut aliquam porttitor arcu, quis volutpat mauris lectus et viverra. Donec magnis aliquam eget odio maecenas pretium, neque in dolor ut justo. Nulla cras mollis. Eros molestie, in dolor nibh, in eget ut luctus feugiat risus sollicitudin, convallis sed ultrices vel, sapien etiam numquam suspendisse id pede. Maecenas quisque, aliquam quis integer elit, lobortis ipsum faucibus vulputate, amet accumsan convallis elit. Donec eros et ultrices lacus accumsan dolor." , 
+    "Lorem ipsum dolor sit amet, voluptate convallis porttitor amet ipsum dolor, sed nostra risus. Nullam pellentesque nam suspendisse lorem et nulla, etiam ac feugiat tristique a tortor neque, eget sapien duis suspendisse ligula aenean eget, tristique ac rutrum mi, et ea eget. Sed dis ut nibh non, ut neque sed, dui euismod eget maecenas mauris donec elit. Aliquam nec, quam cursus iaculis tempor mauris, tempore pede aliquet optio viverra dolor amet. Mauris in mattis egestas fusce, mus at aliquam, wisi mattis nibh, vivamus in hendrerit. Ac ut aliquam at, suspendisse lacinia fermentum, egestas sed, facilisi vitae leo elit odio varius, luctus imperdiet. Rutrum molestie ante et duis pellentesque tempus. Massa massa sodales quam ligula, vivamus orci nam vitae facilisis integer. Dictumst dui neque elit quam interdum libero, lorem ante, torquent ac. Vitae urna, quisque sagittis sed platea egestas, et porta arcu, duis posuere mollis orci sit risus, nam semper et pellentesque ante. Integer etiam sagittis et, suspendisse eu, amet curabitur. Lorem nulla nec urna tellus ligula. Tincidunt consectetuer nec ante, eros in felis eu ut nibh, nullam integer eu integer turpis imperdiet. Vel metus justo sit mi tristique et, condimentum ut adipiscing dolor consequat ante. Ante integer ipsam egestas metus. Justo potenti, lectus vitae sed at semper. Sapien vel. At nulla ac ut, tempor tristique wisi diam pulvinar. Ornare sed vel eius justo eros nunc, et in libero sed. Convallis vel donec placeat, vel bibendum in est arcu. Purus augue massa aptent ad wisi nisl, lorem mus posuere mauris rutrum magnis diam. Fermentum felis laoreet pretium luctus habitasse, rutrum quis integer urna justo sit, non natoque purus id orci, id sed volutpat orci quam ut, in metus ac. Orci venenatis in faucibus aliquam, nec nam urna massa, tincidunt at libero eu rutrum, libero lacus ac sed wisi amet lorem, nulla porttitor fames suspendisse eu pretium. Integer nam sed nulla scelerisque, ut mattis nunc, a urna, elit blandit ultrices qui. Auctor nascetur incididunt morbi at tincidunt risus. Ipsum sed.Vestibulum velit turpis auctor morbi odio, neque interdum eget, sagittis odio sit neque massa at eu, lorem ornare in. Dolor nam fermentum et, ut est metus, bibendum magna integer arcu, cras ornare provident a nunc condimentum vestibulum, nisi luctus id eget. Vestibulum lectus, volutpat cras orci commodo curabitur eget commodo, donec quisque felis velit, accumsan fames lacinia massa libero. Vel eros platea duis eget, volutpat per egestas dolor ut, ut aliquam porttitor arcu, quis volutpat mauris lectus et viverra. Donec magnis aliquam eget odio maecenas pretium, neque in dolor ut justo. Nulla cras mollis. Eros molestie, in dolor nibh, in eget ut luctus feugiat risus sollicitudin, convallis sed ultrices vel, sapien etiam numquam suspendisse id pede. Maecenas quisque, aliquam quis integer elit, lobortis ipsum faucibus vulputate, amet accumsan convallis elit. Donec eros et ultrices lacus accumsan dolor." 
+    ],
+    
+    articleDataShort : ['Integer ornare libero nisi. Duis ac magna urna. Nulla facilisi. Phasellus at ante magna. Quisque nec porta nulla. Suspendisse nec orci vel elit aliquet blandit in non orci. Vivamus posuere dui eget lacinia rutrum. Cum sociis natoque penatibus ...', 'Integer ornare libero nisi. Duis ac magna urna. Nulla facilisi. Phasellus at ante magna. Quisque nec porta nulla. Suspendisse nec orci vel elit aliquet blandit in non orci. Vivamus posuere dui eget lacinia rutrum. Cum sociis natoque penatibus ...']
+    
+    
+    
+}
+
+
+
+    
+    let btnBlogViewMore = document.getElementsByClassName('btn_style_blog');
+
+    btnBlogViewMore = Array.from(btnBlogViewMore);
+
+        for (let q = 0; q<btnBlogViewMore.length; q++){
+    
+        let t = 0;
+
+            btnBlogViewMore[q].addEventListener('click', e=>{
+        
+            t++;  
+                
+            if(t&1){
+                e.currentTarget.previousElementSibling.innerHTML = `${blogArticleData.articleDataFull[i]}`; //нечетно
+                e.currentTarget.style.backgroundColor = "rgb(255,0,54)";
+                e.currentTarget.innerHTML = "COLLAPSE";
+            }
+            else {
+                e.currentTarget.previousElementSibling.innerHTML = `${blogArticleData.articleDataShort[i]}`;
+                e.currentTarget.style.backgroundColor = "rgb(38,38,38)";
+                e.currentTarget.innerHTML = "VIEW MORE";
+            }        
+        })
+    } 
+   
+
+
+//blog lazy load//
+
+let blogContent = '{"content": [ [{"src": "img/our-blog/post1-img.png", "alt": "post1 img", "articleShortText": "Integer ornare libero nisi. Duis ac magna urna. Nulla facilisi. Phasellus at ante magna. Quisque nec porta nulla. Suspendisse nec orci vel elit aliquet blandit in non orci. Vivamus posuere dui eget lacinia rutrum. Cum sociis natoque penatibus ...", "articleFullText": "aaaaaaaaaaa"}, {"src": "img/our-blog/post2-img.png", "alt": "post2 img", "articleShortText": "Integer ornare libero nisi. Duis ac magna urna. Nulla facilisi. Phasellus at ante magna. Quisque nec porta nulla. Suspendisse nec orci vel elit aliquet blandit in non orci. Vivamus posuere dui eget lacinia rutrum. Cum sociis natoque penatibus ...", "articleFullText": "bbbbbbbbb"}]]}';
+
+
+blogContent = JSON.parse(blogContent);
+
+let k = 0;
+
+const blogLazyLoad = e => {
+    
+    const blogTemplate = document.querySelector('.article__blog-template');
+    
+   
+    
+    try {
+        
+        blogContent.content[k].forEach(el=>{
+            
+            let tempVar = blogTemplate.cloneNode(true);
+            
+            tempVar.querySelector('.article__img').setAttribute('src', `${el.src}`);
+            
+            tempVar.querySelector('.article__img').setAttribute('alt', `${el.alt}`);
+            
+            tempVar.querySelector('.text_style_article').innerHTML = `${el.articleShortText}`;
+            
+            tempVar.querySelector('button').setAttribute('class', 'btn btn_style_blog-lazy');
+            
+            tempVar.style.display = "block";
+            
+            
+            
+            
+            
+            document.querySelector('.blog-lazy').appendChild(tempVar);
+            
+            
+                        
+            k=k+1;
+            
+            let j = 0;
+            
+            tempVar.querySelector('button').addEventListener('click', e=>{
+        
+            j++;  
+                
+            if(j&1){
+                e.currentTarget.previousElementSibling.innerHTML = `${el.articleFullText}`; //нечетно
+                e.currentTarget.style.backgroundColor = "rgb(255,0,54)";
+                e.currentTarget.innerHTML = "COLLAPSE";
+            }
+            else {
+                e.currentTarget.previousElementSibling.innerHTML = `${el.articleShortText}`;
+                e.currentTarget.style.backgroundColor = "rgb(38,38,38)";
+                e.currentTarget.innerHTML = "VIEW MORE";
+            }        
+        });
+            
+            
+        })
+        
+        
+       
+        
+    }
+    
+    catch {
+        k = 0;
+        
+       
+        blogAddBtn.style.transform = 'rotate(180deg)';
+        e.currentTarget.removeEventListener('click', blogLazyLoad);
+        
+        
+        let endText = document.createElement('p');
+    
+        endText.setAttribute('class', 'text text_style_lazy-load-finish col-10');
+        document.querySelector('.blog-lazy').appendChild(endText);
+       
+        
+       
+        
+    
+        e.currentTarget.addEventListener('click', blogLazyReload);
+    }
+    
+}
+
+const blogLazyReload = (e) =>{
+    
+    
+    
+    let blogLazyData = document.querySelector('.blog-lazy');
+    
+    while(blogLazyData.firstChild){
+        blogLazyData.removeChild(blogLazyData.firstChild);
+    }
+    
+   blogAddBtn.style.transform = 'rotate(0deg)';
+    
+    e.currentTarget.removeEventListener('click', blogLazyReload);
+    
+     e.currentTarget.addEventListener('click', blogLazyLoad);
+    
+}
 
 
 
 
 
 
+let blogAddBtn = document.querySelector('#blogAddBtn');
+
+let blogAddBtnDoc = blogAddBtn.contentDocument;
+
+blogAddBtnDoc.querySelector('#load_more');
+
+blogAddBtnDoc.addEventListener('click', blogLazyLoad);
 
 
-
-
-
-
-
+};
