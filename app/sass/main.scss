@@ -16,7 +16,7 @@
 
 @import "page/_page.scss", "header/_header.scss", "logo/_logo.scss", "link/_link.scss", "nav/nav.scss", "container/_container.scss",
         "aside/_aside.scss", "carousel/_carousel.scss", "title/title.scss", "btn/_btn.scss", "section/_section.scss", "text/_text.scss", "dropdown/_dropdown.scss",
-        "hex-group/_hex-group.scss", "row/_row.scss", "card/_card.scss", "separator/_separator.scss", "sort/_sort.scss", "portfolio-gallery/portfolio-gallery.scss", "loader/_loader.scss", "offer/_offer.scss", "article/_article.scss";
+        "hex-group/_hex-group.scss", "row/_row.scss", "card/_card.scss", "separator/_separator.scss", "sort/_sort.scss", "portfolio-gallery/portfolio-gallery.scss", "loader/_loader.scss", "offer/_offer.scss", "article/_article.scss", "contacts/_contacts.scss", "footer/_footer.scss";
 
 //add fonts
 
@@ -70,6 +70,11 @@
     font-family: "Raleway-SemiBold";
     src: url("../fonts/Raleway-SemiBold.ttf") format('truetype');
 };
+
+@font-face {
+    font-family: "FinlandRoundedThin";
+    src: url("../fonts/Finland-rounded/Finland Rounded Thin.ttf") format('truetype');
+}
 
 
 

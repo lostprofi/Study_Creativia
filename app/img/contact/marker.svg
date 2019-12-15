@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="300" height="226" viewBox="0 0 300 226">
+<defs>
+    <style>
+	
+	@font-face {
+		font-family: "MyriadPro-Regular";
+		src: url("../../fonts/MyriadPro-Regular.ttf") format('truetype');
+	}
+        
+        
+        .marker-text{
+        font-family: MyriadPro-Regular;
+        font-size: 16px;
+        
+        fill: rgb(255, 255, 255);
+        }
+		
+		
+      .cls-1 {
+        fill: #262626;
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <path class="cls-1" d="M250,10161H550v170H250v-170Zm287,170-53,56,23-56h30Z" transform="translate(-250 -10161)"/>
+  <text x = "24" y = "45" class = "marker-text">egypt, creativia </text>
+  <text x = "24" y = "70" class = "marker-text">Address: cairo 123 </text>
+  <text x = "24" y = "95" class = "marker-text">Phone: +0201091915171 </text>
+  <text x = "24" y = "120" class = "marker-text">Email: gfx3mr@gmail.com</text>
+</svg>

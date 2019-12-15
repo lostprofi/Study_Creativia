@@ -1,7 +1,9 @@
 .card {
     text-align: center;
     
-   
+    &_style_follow {
+        margin: 0 15px;
+    }
     
     &__head{
         
@@ -114,6 +116,11 @@
         &_style_services-end {
             text-align: start;
             padding: 54px 0 0 30px;
+        }
+        
+        &_style_follow {
+            color: rgb(255,255,255);
+            margin-top: 20px;
         }
     }
     
