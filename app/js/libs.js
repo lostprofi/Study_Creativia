@@ -189,6 +189,8 @@ carouselBtnsNewArray.forEach((e)=>{
         
         let cardToggleContent = e.currentTarget.parentElement.nextElementSibling;
         
+        console.log(e.currentTarget.parentElement);
+        
         
         let cardSvgIconDoc = cardSvgIcon.contentDocument;
         

@@ -4690,7 +4690,7 @@ a.text-dark:hover, a.text-dark:focus {
 
 .row__img-container {
   height: 500px;
-  background: url(../../img/product-features/tablet.png);
+  background: url(../img/product-features/tablet.png);
   background-position: bottom -52px left -52px;
   padding: 0; }
 
@@ -5073,7 +5073,7 @@ a.text-dark:hover, a.text-dark:focus {
 .contacts {
   position: relative;
   height: 575px;
-  background-image: url(../../img/contact/map.png);
+  background-image: url(../img/contact/map.png);
   overflow: hidden; }
   .contacts__marker {
     position: absolute;

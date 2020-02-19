@@ -62,7 +62,7 @@ gulp.task('scripts', function(){
 gulp.task('watch', ['browser-sync','sass', 'scripts'], function(){
   gulp.watch('app/sass/**/*.scss', ['sass']);//наблюдаем за SCSS файлом, после его изменения компилируем
   gulp.watch('app/.html').on('change', browserSync.reload);// наблюдение за html, после изменения обновляем браузер
-  gulp.watch('app/js/**/*.js', ['scripts']);// наблюдение за js, после изменения обновляем браузер
+  gulp.watch('app/js/libs.js', ['scripts']);// наблюдение за js, после изменения обновляем браузер
 });
 
 //task удаления папки dist
@@ -75,12 +75,7 @@ gulp.task('clean', function(){
 gulp.task('img', function(){
   return gulp.src('app/img/**/*')//берем все файлы из папки img
   //сжимаем изображения с наилучшим качеством
-  .pipe(cache(imagemin({
-    interlaced: true,
-    progressive: true,
-    svgPlugins: [{remomveViewBox: false}],
-    use: [pngquant()]
-  })))
+ 
   //выгружаем в продакшен в папку img
   .pipe(gulp.dest('dist/img'));
 });

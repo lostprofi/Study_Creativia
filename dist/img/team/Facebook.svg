@@ -1,0 +1,21 @@
+<svg id="Facebook" xmlns="http://www.w3.org/2000/svg" width="45" height="41" viewBox="0 0 45 41">
+
+<defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+      }
+
+      .cls-1, .cls-2 {
+        fill-rule: evenodd;
+		cursor: pointer;
+      }
+
+      .cls-2 {
+        fill: #ff0036;
+      }
+    </style>
+  </defs>
+  <path id="Shape_3_copy" data-name="Shape 3 copy" class="cls-1" d="M184.251,5014L173,4993.5l11.249-20.5h22.5L218,4993.5l-11.25,20.5h-22.5Z" transform="translate(-173 -4973)"/>
+  <path id="Facebook_Icon" data-name="Facebook Icon" class="cls-2" d="M197.675,4985.21h-1.827a3.5,3.5,0,0,0-3.812,3.76v2.79h-2.588l0.007,2.18h2.58l0,9.58h2.593v-9.58h2.856l0.61-2.18h-3.452v-2.87a1.068,1.068,0,0,1,1.207-1.06h1.812Z" transform="translate(-173 -4973)"/>
+</svg>
